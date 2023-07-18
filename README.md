@@ -1,6 +1,8 @@
-# porter-update-action
+# porter-update-config-action
 
 This Github action updates an app deployment running on Porter without running a build or pushing an updated image to a repo.
+
+This action is unsupported and should be deleted by end of month July 2023. (If not, ping d-g-town.)
 
 Usage
 ---
