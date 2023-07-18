@@ -7,9 +7,6 @@ inputs:
   cluster:
     description: cluster ID of Porter cluster
     required: true
-  dockerfile:
-    description: path to the dockerfile used to build the application
-    required: false
   host:
     description: host URL of Porter instance
     required: false
@@ -17,9 +14,6 @@ inputs:
     description: namespace for the application
     required: false
     default: default
-  path:
-    description: path to build directory
-    required: false
   project:
     description: project ID of Porter project
     required: true
