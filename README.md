@@ -1,6 +1,6 @@
 # porter-update-action
 
-This Github action updates an app deployment running on Porter.
+This Github action updates an app deployment running on Porter without running a build or pushing an updated image to a repo.
 
 Usage
 ---
@@ -9,7 +9,7 @@ steps:
   - name: Checkout code
     uses: actions/checkout@v2.3.4
   - name: Update Porter deployment
-    uses: porter-dev/porter-update-action@v0.1.0
+    uses: porter-dev/porter-update-config-action@v0.1.0
     with:
       app: foo
       cluster: 1234
@@ -24,10 +24,8 @@ The possible inputs are:
 
 - `app`: (string, required): Name of application.
 - `cluster`: (number, required): Cluster ID of Porter cluster.
-- `dockerfile`: (string, optional): path to the Dockerfile used to build the image.
 - `host`: (string, optional): Host URL of Porter instance. Set this if you use a self-hosted Porter instance.
 - `namespace`: (string, optional): Namespace of the application (default "default")
-- `path`: (string, optional): Path to build directory.
 - `project`: (number, required): Project ID of Porter project.
 - `tag` (string, optional): The specified tag to use (default "latest")
 - `token`: (string, required): Token for Porter authentication.
